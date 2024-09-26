@@ -15,9 +15,7 @@ export const taskSlice = createSlice({
     initialState,
     reducers: {
         addTask: (state, action) => {
-            console.log('fff',action);
             state.tasks = [...state.tasks, action.payload];
-            
         },
         editTask: (state, action) => {
             state.tasks = state.tasks.map((task) => {
@@ -28,7 +26,7 @@ export const taskSlice = createSlice({
             });
         },
         deleteTask: (state, action) => {
-            state.tasks = state.tasks.filter((task) => task !== action.payload);
+            state.tasks = state.tasks.filter((task) => task.id !== action.payload.id);
         }
     },
 });
