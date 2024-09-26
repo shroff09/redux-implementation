@@ -1,9 +1,10 @@
-import Image from "next/image";
+'use client'
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div>
-      <h1 className="text-5xl font-bold">Next.js</h1>
+        <Link href="/task">Open todo</Link>
     </div>
   );
 }
